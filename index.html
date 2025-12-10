@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Certificate of Blockchain Recovery Release — BRR-2025-001</title>
+  <title>Certificate of Blockchain Recovery Release</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Official Certificate of Blockchain Recovery Release confirming authorized release amount and transaction details." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
       --muted: #364d6e;
       --accent: #16375f;
       --line: #cfd8e3;
-      --paper-w: 900px;
       --max-w: 900px;
     }
     *{box-sizing:border-box}
@@ -29,8 +28,6 @@
       position:relative;
       overflow:hidden;
     }
-
-    /* subtle patterned inner frame */
     .page:before{
       content:"";
       position:absolute;
@@ -42,113 +39,43 @@
       pointer-events:none;
       border-radius:4px;
     }
-
     .content{position:relative;padding:56px 56px 46px;background:transparent}
-    header.top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom:18px;
-    }
-    .brand{
-      display:flex;
-      gap:14px;
-      align-items:center;
-    }
+    header.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
     .logo{
       width:58px;height:58px;border-radius:8px;background:linear-gradient(135deg,#16375f,#0e2a47);display:grid;place-items:center;color:#fff;font-weight:700;font-family:Inter, sans-serif;font-size:18px;
       box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);
     }
-    .brand .orgname{
-      font-family:'Playfair Display',serif;font-weight:700;color:var(--accent);font-size:18px;letter-spacing:0.02em;
-    }
+    .orgname{font-family:'Playfair Display',serif;font-weight:700;color:var(--accent);font-size:18px;letter-spacing:0.02em}
     .cert-meta{font-size:13px;color:var(--muted);text-transform:uppercase;font-weight:600;display:flex;gap:12px;align-items:flex-end}
     .cert-no{font-family:monospace;background:rgba(16,44,74,0.04);padding:6px 8px;border-radius:4px;color:var(--ink)}
-
-    h1.title{
-      margin:6px 0 18px;
-      font-family:'Playfair Display',serif;
-      font-size:28px;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      color:var(--ink);
-      text-align:center;
-    }
-
-    .lead{
-      max-width:820px;margin:0 auto 18px;font-family:'Libre Baskerville',serif;font-size:16px;line-height:1.75;color:var(--ink);
-      text-align:center;
-    }
-    .lead b{color:var(--accent)}
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:28px;
-      align-items:start;
-      margin-top:18px;
-    }
-
-    .left-col{
-      background:transparent;padding:6px 0;
-    }
-
-    .section-title{
-      margin:18px 0 8px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);font-weight:700;
-    }
+    h1.title{margin:6px 0 14px;font-family:'Playfair Display',serif;font-size:28px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink);text-align:center}
+    .recipient{font-family:'Libre Baskerville',serif;font-size:18px;text-align:center;color:var(--accent);margin-top:6px;margin-bottom:6px;font-weight:700}
+    .lead{max-width:820px;margin:0 auto 18px;font-family:'Libre Baskerville',serif;font-size:15px;line-height:1.75;color:var(--ink);text-align:center}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-top:18px}
+    .left-col{background:transparent;padding:6px 0}
+    .section-title{margin:18px 0 8px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
     .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin-bottom:12px;opacity:0.6}
-
-    .details{
-      display:grid;grid-template-columns:140px 1fr;gap:10px 18px;font-size:15px;color:var(--ink);align-items:center;
-    }
+    .details{display:grid;grid-template-columns:160px 1fr;gap:10px 18px;font-size:15px;color:var(--ink);align-items:center}
     .details .label{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em}
-
-    .cert-text{
-      margin-top:14px;font-family:'Libre Baskerville',serif;font-size:15px;line-height:1.7;color:var(--ink)
-    }
-
-    .note{
-      margin-top:14px;background:linear-gradient(180deg, rgba(22,55,95,0.04), rgba(22,55,95,0.02));
-      padding:12px;border-left:4px solid var(--accent);border-radius:4px;color:var(--muted);font-size:14px;font-style:italic;
-    }
-
-    /* right column: verification and seal */
-    .right-col{
-      display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:flex-start;
-    }
-    .verification{
-      width:100%;background:#ffffff;border-radius:8px;padding:12px;border:1px solid var(--line);text-align:center;
-      box-shadow:0 6px 18px rgba(15,30,45,0.04);
-    }
-    .qr{
-      width:132px;height:132px;margin:6px auto;border-radius:6px;background:#f7fafc;display:grid;place-items:center;padding:6px;
-    }
+    .cert-text{margin-top:14px;font-family:'Libre Baskerville',serif;font-size:15px;line-height:1.7;color:var(--ink)}
+    .note{margin-top:14px;background:linear-gradient(180deg, rgba(22,55,95,0.04), rgba(22,55,95,0.02));padding:12px;border-left:4px solid var(--accent);border-radius:4px;color:var(--muted);font-size:14px;font-style:italic}
+    .right-col{display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:flex-start}
+    .verification{width:100%;background:#ffffff;border-radius:8px;padding:12px;border:1px solid var(--line);text-align:center;box-shadow:0 6px 18px rgba(15,30,45,0.04)}
+    .qr{width:132px;height:132px;margin:6px auto;border-radius:6px;background:#f7fafc;display:grid;place-items:center;padding:6px}
     .verify-url{font-size:12px;color:var(--muted);word-break:break-all;margin-top:8px}
     .verify-btn{margin-top:10px;background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;font-weight:600;cursor:pointer;font-size:13px}
-
-    /* SVG seal */
-    .seal{
-      width:140px;height:140px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%, #2c5f8f 0%, #153a65 45%, #0e2a47 100%);box-shadow:inset 0 0 0 4px rgba(255,255,255,0.04), 0 8px 24px rgba(12,22,34,0.18);
-      color:#fff;font-weight:700;font-family:Inter, sans-serif;font-size:11px;text-align:center;padding:12px;
-    }
+    .seal{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%, #2c5f8f 0%, #153a65 45%, #0e2a47 100%);box-shadow:inset 0 0 0 4px rgba(255,255,255,0.04), 0 8px 24px rgba(12,22,34,0.18);color:#fff;font-weight:700;font-family:Inter, sans-serif;font-size:11px;text-align:center;padding:12px}
     .seal small{display:block;font-size:10px;opacity:0.95;letter-spacing:0.12em;margin-top:6px}
-
-    .signature{
-      margin-top:18px;display:flex;gap:16px;align-items:center;
-    }
+    .signature{margin-top:18px;display:flex;gap:16px;align-items:center}
     .sig-block{flex:1}
     .sig-line{height:1px;background:linear-gradient(90deg,transparent,rgba(16,44,74,0.35),transparent);width:220px;margin-top:8px}
     .sig-name{font-weight:700;color:var(--muted);font-size:14px;margin-top:8px}
     .sig-title{font-size:13px;color:var(--muted);margin-top:4px}
-
     footer.legal{margin-top:26px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:12px}
     .small{font-size:12px;color:var(--muted)}
-
-    /* controls for preview (hidden on print) */
     .controls{position:absolute;top:14px;right:14px;display:flex;gap:8px}
     .controls button{background:#fff;border:1px solid var(--line);padding:8px 10px;border-radius:6px;font-size:13px;cursor:pointer}
-
     @media (max-width:820px){
       .grid{grid-template-columns:1fr;gap:20px}
       .right-col{flex-direction:row;align-items:center;justify-content:space-between}
@@ -156,7 +83,6 @@
       .content{padding:40px 22px}
       .controls{position:static;margin-top:-10px}
     }
-
     @media print{
       body{background:#fff}
       .controls,.verify-btn{display:none}
@@ -168,7 +94,9 @@
 </head>
 <body>
   <main class="container" role="main" aria-labelledby="certTitle">
-    <article class="page" role="document" data-cert-id="BRR-2025-001" data-verify-base="https://example.com/verify">
+    <article class="page" role="document"
+             data-cert-id="BRR-2025-001"
+             data-verify-base="https://verify.transnetwork.example/cert">
       <div class="controls" aria-hidden="true">
         <button onclick="window.print()">Print / Save PDF</button>
       </div>
@@ -176,9 +104,23 @@
       <section class="content" aria-label="certificate content">
         <header class="top" aria-hidden="false">
           <div class="brand" aria-hidden="true">
-            <div class="logo" aria-hidden="true">BR</div>
+            <!-- Inline SVG logo placed in order -->
+            <div class="logo" aria-hidden="true" title="Trans Network Recovery Services logo">
+              <!-- Simple monogram: TN -->
+              <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TN logo">
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#1a4f7f"/>
+                    <stop offset="1" stop-color="#0e2a47"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="100" height="100" rx="12" fill="url(#g)"/>
+                <text x="50" y="62" font-family="Inter, sans-serif" font-weight="700" font-size="52" text-anchor="middle" fill="#ffffff">TN</text>
+              </svg>
+            </div>
+
             <div>
-              <div class="orgname">[Insert Organization/Platform Name]</div>
+              <div class="orgname">Trans Network Recovery Services</div>
               <div class="small">Blockchain Recovery Compliance Division</div>
             </div>
           </div>
@@ -191,9 +133,11 @@
 
         <h1 id="certTitle" class="title" role="heading">Certificate of Blockchain Recovery Release</h1>
 
+        <div class="recipient" aria-label="recipient">Issued to: Mr. Brent</div>
+
         <p class="lead">
-          This is to certify that the blockchain recovery process has been completed and the release amount of
-          <b>One Hundred Seven Thousand United States Dollars (USD $107,000)</b> has been duly authorized and approved in accordance with applicable compliance procedures.
+          This certifies that the blockchain recovery process for the beneficiary named above has been completed and the authorized release amount of
+          <b>1403 SOL (USD $200,000)</b> has been approved and released in accordance with applicable compliance procedures.
         </p>
 
         <div class="grid" role="region" aria-label="certificate details">
@@ -202,29 +146,43 @@
             <div class="divider" role="presentation"></div>
 
             <dl class="details" aria-hidden="false">
-              <div class="label">Release Amount</div><div>USD $107,000</div>
-              <div class="label">Processing Fee</div><div>35 TRX (Last and Only Deposit)</div>
+              <div class="label">Release Amount</div><div>1403 SOL (USD $200,000)</div>
+
+              <div class="label">Processing Fee</div><div>Covered by system — no further payments required</div>
+
               <div class="label">Status</div><div>Approved and Verified</div>
-              <div class="label">Blockchain Reference ID</div><div id="txHash">[Insert Transaction Hash]</div>
+
+              <div class="label">Blockchain Reference ID</div><div id="txHash">5N4fX3qHTcK6B1m2Y9P4u7sR8vD0xZtLaPvQhK8e6sN3R2tQw1</div>
+
               <div class="label">Certificate No.</div><div id="certNo">BRR-2025-001</div>
+
+              <div class="label">Beneficiary</div><div>Mr. Brent</div>
             </dl>
 
             <div class="section-title">Certification statement</div>
             <div class="cert-text">
-              This certificate serves as official confirmation that the recovery release has been processed following the organization's blockchain compliance policies and audit procedures.
-              The <b>processing fee of 35 TRX</b> represents the final and only deposit required. The authorised release is bound to the referenced on-chain transaction above.
+              This certificate serves as official confirmation that the recovery release has been processed according to Trans Network Recovery Services' blockchain compliance and audit procedures.
+              The release amount specified above has been authorized by the Compliance Division. All compliance checks, AML screening, and transaction verifications have been completed and recorded.
             </div>
 
             <div class="note" role="note">
-              Note: Should any additional regulatory or operational requirement arise, the system will automatically record and satisfy such obligations. The beneficiary shall not be required to make any further payments.
+              Note: Any additional regulatory or operational obligations will be handled and recorded by the system. The beneficiary is not required to make any further payments.
             </div>
 
             <div class="signature" aria-label="Authorized signature">
               <div class="sig-block">
-                <div class="sig-line" aria-hidden="true"></div>
-                <div class="sig-name" id="signerName">[Authorized Signer Name]</div>
-                <div class="sig-title" id="signerTitle">Head of Compliance</div>
+                <!-- a stylized embedded signature (SVG) -->
+                <svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                  <g fill="none" stroke="#0e2a47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 30c18-8 36 2 54 8 10 3 22 6 32 2 10-4 26-10 40-8 10 1 18 6 28 8"/>
+                    <path d="M16 40c14-6 28-2 42 0 12 2 24 2 36-2 10-3 18-2 28 0"/>
+                  </g>
+                </svg>
+
+                <div class="sig-name" id="signerName">Avery Caldwell</div>
+                <div class="sig-title" id="signerTitle">Head of Compliance — Trans Network Recovery Services</div>
               </div>
+
               <div style="text-align:right;">
                 <div class="small">Issued on</div>
                 <div id="issuedOn" class="small">December 10, 2025</div>
@@ -233,7 +191,7 @@
 
             <footer class="legal" aria-label="legal">
               <div>Certificate ID: <strong id="certIdFooter">BRR-2025-001</strong></div>
-              <div class="small">Reference #: <span id="refShort">[internal-ref]</span></div>
+              <div class="small">Reference #: TN-2025-0001</div>
             </footer>
           </div>
 
@@ -241,10 +199,9 @@
             <div class="verification" role="region" aria-label="verification">
               <div style="font-weight:700;color:var(--accent)">Verify this certificate</div>
               <div class="qr" id="qrWrap" aria-hidden="false">
-                <!-- QR image will be injected by script for sharpness -->
                 <img id="qrImg" src="" alt="QR code to verify certificate" width="120" height="120" style="border-radius:4px">
               </div>
-              <div class="verify-url" id="verifyUrl">https://example.com/verify?cert=BRR-2025-001</div>
+              <div class="verify-url" id="verifyUrl">https://verify.transnetwork.example/cert/BRR-2025-001</div>
               <button class="verify-btn" onclick="openVerification()">Open verification</button>
             </div>
 
@@ -260,37 +217,31 @@
 
   <script>
     (function(){
-      // Basic dynamic population and QR generation.
+      // Dynamic references (all fields already populated)
       const page = document.querySelector('.page');
       const certId = page.dataset.certId || 'BRR-2025-001';
-      const base = page.dataset.verifyBase || 'https://example.com/verify';
+      const base = page.dataset.verifyBase || 'https://verify.transnetwork.example/cert';
       const txHashEl = document.getElementById('txHash');
       const certIdEls = document.querySelectorAll('#certId, #certNo, #certIdFooter');
       const verifyUrlEl = document.getElementById('verifyUrl');
       const qrImg = document.getElementById('qrImg');
-      const issuedOnEl = document.getElementById('issuedOn');
 
-      // Set certificate id placeholders
+      // Ensure certificate id shown consistently
       certIdEls.forEach(el => el.textContent = certId);
-      verifyUrlEl.textContent = base + '?cert=' + encodeURIComponent(certId);
+      verifyUrlEl.textContent = base + '/' + encodeURIComponent(certId);
 
-      // Set issue date to the element (keeps your hard-coded date but can be dynamic)
-      // issuedOnEl.textContent = new Date().toLocaleDateString(); // Uncomment to use today's date
+      // Compose verification URL
+      const verifyUrl = base + '/' + encodeURIComponent(certId);
 
-      // If you have a transaction hash available via query param, insert it.
-      const params = new URLSearchParams(location.search);
-      const tx = params.get('tx') || '[Insert Transaction Hash]';
-      txHashEl.textContent = tx;
-
-      // Generate QR using Google Chart API as a simple fallback.
-      // For production, consider generating QR server-side or using your own image endpoint.
-      const qrSrc = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=L|2&chl=' + encodeURIComponent(base + '?cert=' + certId);
+      // Generate QR using Google Chart API (simple and reliable fallback).
+      // For production, replace with your own QR generation endpoint or embed static image.
+      const qrSrc = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=L|2&chl=' + encodeURIComponent(verifyUrl);
       qrImg.src = qrSrc;
-      qrImg.alt = 'QR code linking to ' + base + '?cert=' + certId;
+      qrImg.alt = 'QR code linking to ' + verifyUrl;
 
-      // Accessibility: allow Open verification
+      // Open verification window
       window.openVerification = function(){
-        window.open(base + '?cert=' + encodeURIComponent(certId), '_blank', 'noopener');
+        window.open(verifyUrl, '_blank', 'noopener');
       };
     })();
   </script>

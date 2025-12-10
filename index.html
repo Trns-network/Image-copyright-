@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certificate of Blockchain Recovery Release</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink: #0e2a47;         /* Navy */
+      --ink-2: #1b3f66;       /* Navy deep */
+      --cream: #f7f4ee;       /* Cream background */
+      --line: #102c4a;        /* Border line */
+      --muted: #253b57;
+      --accent: #16375f;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e9e6df;
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0;
+      background: var(--cream);
+      position: relative;
+      /* Dual decorative border */
+      border: 10px solid var(--line);
+      outline: 16px solid transparent;
+      background-clip: padding-box;
+    }
+
+    /* Inner patterned border using repeating linear gradient */
+    .page:before {
+      content: '';
+      position: absolute;
+      inset: 18px;
+      border: 3px solid var(--line);
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(16,44,74,0.08) 0,
+          rgba(16,44,74,0.08) 12px,
+          transparent 12px,
+          transparent 24px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(16,44,74,0.08) 0,
+          rgba(16,44,74,0.08) 12px,
+          transparent 12px,
+          transparent 24px
+        );
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      padding: 70px 70px 60px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: 'Playfair Display', 'Libre Baskerville', serif;
+      font-size: 32px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin: 0 0 20px;
+      text-transform: uppercase;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .meta .left { text-align: left; }
+    .meta .right { text-align: right; }
+
+    .statement {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink);
+      margin: 0 0 28px;
+    }
+    .statement b { color: var(--ink-2); }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 28px 0 10px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--line), transparent);
+      margin: 8px 0 18px;
+      opacity: 0.35;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      row-gap: 10px;
+      column-gap: 18px;
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .details .label {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      font-size: 13px;
+    }
+
+    .cert-text {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink);
+      margin: 16px 0 8px;
+    }
+
+    .note {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--muted);
+      background: rgba(22,55,95,0.06);
+      border-left: 3px solid var(--accent);
+      padding: 10px 12px;
+      border-radius: 4px;
+      margin: 8px 0 24px;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+      align-items: end;
+      margin-top: 26px;
+    }
+
+    .authority {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+    .org {
+      font-size: 15px;
+      color: var(--ink-2);
+      margin-top: 6px;
+    }
+
+    /* Stylized seal (CSS only) */
+    .seal {
+      justify-self: end;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #204a77 0%, #143a62 40%, #0e2a47 100%);
+      position: relative;
+      box-shadow: inset 0 0 0 3px rgba(255,255,255,0.15),
+                  0 6px 18px rgba(0,0,0,0.25);
+    }
+    .seal:before {
+      content: "BLOCKCHAIN\nRECOVERY\nCOMPLIANCE";
+      white-space: pre;
+      position: absolute;
+      inset: 8px;
+      border: 2px dashed rgba(255,255,255,0.3);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #e7edf6;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-align: center;
+      line-height: 1.6;
+      padding-top: 4px;
+    }
+    .seal:after {
+      content: "⚖︎ 🔑 🛡︎";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 18px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    }
+
+    /* Signature line */
+    .sigline {
+      margin-top: 8px;
+      width: 220px;
+      height: 1px;
+      background: rgba(16,44,74,0.35);
+    }
+    .siglabel {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Print tweaks */
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; }
+    }
+
+    /* Responsiveness */
+    @media (max-width: 640px) {
+      .content { padding: 40px 22px; }
+      .meta { grid-template-columns: 1fr; }
+      .meta .right { text-align: left; }
+      .footer { grid-template-columns: 1fr; }
+      .seal { justify-self: start; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Certificate of Blockchain Recovery Release">
+    <section class="content">
+      <h1 class="title">Certificate of Blockchain Recovery Release</h1>
+
+      <div class="meta" aria-label="Certificate metadata">
+        <div class="left"><span>Certificate No.: BRR-2025-001</span></div>
+        <div class="right"><span>Date Issued: December 10, 2025</span></div>
+      </div>
+
+      <p class="statement">
+        This is to certify that the blockchain recovery process has been successfully completed and the release amount of
+        <b>One Hundred Seven Thousand United States Dollars (USD $107,000)</b> has been duly authorized.
+      </p>
+
+      <div class="section-title">Transaction details</div>
+      <div class="divider" role="presentation"></div>
+
+      <div class="details" aria-label="Transaction fields">
+        <div class="label">Release Amount</div>
+        <div>USD $107,000</div>
+
+        <div class="label">Processing Fee</div>
+        <div>35 TRX (Last and Only Deposit)</div>
+
+        <div class="label">Status</div>
+        <div>Approved and Verified</div>
+
+        <div class="label">Blockchain Reference ID</div>
+        <div>[Insert Transaction Hash]</div>
+      </div>
+
+      <div class="section-title">Certification statement</div>
+      <div class="cert-text">
+        This certificate serves as official confirmation that the recovery release has been processed in accordance with
+        blockchain compliance standards. The <b>processing fee of 35 TRX</b> represents the final and only deposit required.
+      </div>
+
+      <div class="note">
+        Note: Should any additional requirement arise, the system will automatically cover such obligations.
+        The beneficiary will not be required to make any further payments.
+      </div>
+
+      <div class="footer">
+        <div>
+          <div class="authority">Blockchain Recovery Compliance Division</div>
+          <div class="org">[Insert Organization/Platform Name]</div>
+          <div class="sigline" aria-hidden="true"></div>
+          <div class="siglabel">Authorized Signature</div>
+        </div>
+
+        <div class="seal" aria-label="Official compliance seal"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

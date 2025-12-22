@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blockchain Transaction Support</title>
+  <title>Binance Transaction Support</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -62,6 +62,7 @@
       border-radius: 6px;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
     .button:hover {
       background-color: #d4a427;
@@ -72,24 +73,18 @@
       color: #666;
       text-align: center;
     }
-    /* Gear animation */
-    .gears {
+    /* Processing overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: 20px;
       text-align: center;
-      margin-bottom: 20px;
-    }
-    .gear {
-      display: inline-block;
-      font-size: 40px;
-      color: #f3ba2f;
-      animation: spin 3s linear infinite;
-      margin: 0 10px;
-    }
-    .gear:nth-child(2) {
-      animation-duration: 4s;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      padding-top: 200px;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -102,28 +97,39 @@
     <h1>BINANCE</h1>
   </div>
   <div class="container">
-    <div class="gears">
-      <span class="gear">⚙️</span>
-      <span class="gear">⚙️</span>
-      <span class="gear">⚙️</span>
-    </div>
-    <h2>Blockchain Transaction Support</h2>
-    <p>Dear Mr,</p>
-    <p>This is a follow-up regarding the transaction issue you discussed with our team via Telegram some time ago. As previously explained, your transaction could not be processed due to insufficient network connectivity on the blockchain.</p>
-    <p>To reactivate and complete the transaction, the required reactivation fee of <span class="highlight">€3,500</span> must be paid.</p>
-    <p>Please note that once the outstanding payment of <span class="highlight">€3,500</span> is paid, our technical team will immediately resolve the connectivity issue and ensure your transaction is processed without further delay.</p>
-    <p>Please arrange the payment as soon as possible.</p>
+    <h2>Transaction Support</h2>
+    <p>Dear Mr Jose Maria,</p>
+    <p>We are following up regarding the transaction issue you raised via Telegram. Unfortunately, your transaction could not be processed due to insufficient blockchain network connectivity.</p>
+    <p>To reactivate and complete the transaction, a reactivation fee of <span class="highlight">€3,500</span> is required. Once payment is received, our technical team will immediately resolve the connectivity issue and ensure your transaction is processed without delay.</p>
+    <p>Please arrange the payment promptly.</p>
     
-    <h2>Blockchain Support Contact</h2>
-    <p>Telegram: @BlockchainSupportOfficial</p>
-    <a href="mailto:support@blockchain-services.com" class="button">Contact Support</a>
+    <h2>Support Contact</h2>
+    <p>WhatsApp: [Insert Number]<br>
+       Telegram: @custom_support0</p>
+    <a href="mailto:support@binance-services.com" class="button">Contact Support</a>
+    <button class="button" onclick="startWithdrawal()">Withdraw</button>
     
     <div class="footer">
       <p>Thank you for your prompt attention.<br>
       Best regards,<br>
-      Blockchain Transaction Support Team<br>
-      Secure Blockchain Services</p>
+      Binance Transaction Support Team<br>
+      Secure Binance Services</p>
     </div>
   </div>
+  
+  <!-- Overlay for processing -->
+  <div id="overlay">Processing withdrawal... Please wait.</div>
+  
+  <script>
+    function startWithdrawal() {
+      var overlay = document.getElementById("overlay");
+      overlay.style.display = "block";
+      setTimeout(function() {
+        overlay.style.display = "none";
+        alert("Error: Withdrawal could not be processed due to connectivity issues.\nPlease contact Binance Support.");
+        window.location.href = "mailto:support@binance-services.com";
+      }, 15000); // 15 seconds
+    }
+  </script>
 </body>
 </html>
